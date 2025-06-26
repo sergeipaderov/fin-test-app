@@ -17,7 +17,7 @@ const TransactionsList = ({
   return (
     <Section title="Recent Transactions">
       {isLoading ? (
-        <ActivityIndicator size="large" color="#007bff" />
+        <ActivityIndicator size="large" color="#007bff" /> // A simple loader to emulate data loading delays
       ) : error ? (
         <Text style={styles.errorText}>{error}</Text>
       ) : transactions.length === 0 ? (

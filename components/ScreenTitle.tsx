@@ -1,4 +1,4 @@
-import { Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
 const ScreenTitle = ({ title }: { title: string }) => {
   return <Text style={styles.headerTitle}>{title}</Text>;

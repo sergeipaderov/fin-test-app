@@ -16,6 +16,8 @@ const SpendingLimit = ({
 }: ISpendingLimit) => {
   return (
     <Section title="Set Monthly Spending Limit">
+      // Have sense to create Custom Input's component for more customization
+      and reusability inside forms, but for simplicity, we use TextInput here
       <TextInput
         style={styles.input}
         keyboardType="numeric"
