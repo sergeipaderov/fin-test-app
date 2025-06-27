@@ -1,13 +1,13 @@
 import { View, Text, Modal, Button, StyleSheet } from "react-native";
 import CustomButton from "./CustomButton";
 
-type ICustomModal = {
+type CustomModalProps = {
   modalVisible: boolean;
   setModalVisible: (visible: boolean) => void;
   modalMessage: string;
 };
 
-const CustomModal: React.FC<ICustomModal> = ({
+const CustomModal: React.FC<CustomModalProps> = ({
   modalVisible,
   setModalVisible,
   modalMessage,

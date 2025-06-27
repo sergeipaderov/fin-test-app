@@ -4,7 +4,7 @@ import Section from "./Section";
 import { Ionicons } from "@expo/vector-icons";
 import ProgressBar from "./ProgressBar";
 
-type ISpendingSummary = {
+type SpendingSummaryProps = {
   isOverBudget: boolean;
   totalSpent: number;
   spendingLimit: number | null;
@@ -16,7 +16,7 @@ const SpendingSummary = ({
   totalSpent,
   spendingLimit,
   remainingBudget,
-}: ISpendingSummary) => {
+}: SpendingSummaryProps) => {
   const progressPercentage = useMemo(() => {
     if (spendingLimit === null || spendingLimit <= 0) return 0;
     const percentage = (totalSpent / spendingLimit) * 100;

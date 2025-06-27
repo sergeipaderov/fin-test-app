@@ -1,7 +1,7 @@
 import { Text, StyleSheet, View } from "react-native";
 import { useMemo } from "react";
 
-interface IProgressBar {
+interface ProgressBarProps {
   spendingLimit: number;
   progressPercentage: number;
   isOverBudget: boolean;
@@ -11,7 +11,7 @@ const ProgressBar = ({
   spendingLimit,
   progressPercentage,
   isOverBudget,
-}: IProgressBar) => {
+}: ProgressBarProps) => {
   const progressBarFillColor = useMemo(() => {
     if (spendingLimit === null) return "rgba(107,114,128,0.5)";
     return isOverBudget ? "#dc3545" : "#28a745";

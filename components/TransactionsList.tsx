@@ -3,7 +3,7 @@ import Section from "./Section";
 import TransactionsItem from "./TransactionItem";
 import { Transaction } from "./../mockData";
 
-type ITransactionsList = {
+type TransactionsListProps = {
   transactions: Transaction[];
   isLoading: boolean;
   error?: string | null;
@@ -13,7 +13,7 @@ const TransactionsList = ({
   transactions,
   isLoading,
   error,
-}: ITransactionsList) => {
+}: TransactionsListProps) => {
   return (
     <Section title="Recent Transactions">
       {isLoading ? (

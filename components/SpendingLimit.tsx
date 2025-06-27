@@ -1,7 +1,7 @@
 import { Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import Section from "./Section";
 
-type ISpendingLimit = {
+type SpendingLimitProps = {
   limitInput: string;
   spendingLimit: number | null;
   setLimitInput: (input: string) => void;
@@ -13,11 +13,11 @@ const SpendingLimit = ({
   spendingLimit,
   setLimitInput,
   handleSetLimit,
-}: ISpendingLimit) => {
+}: SpendingLimitProps) => {
   return (
+    // Have sense to create Custom Input's component for more customization
+    // and reusability inside forms, but for simplicity, we use TextInput here
     <Section title="Set Monthly Spending Limit">
-      // Have sense to create Custom Input's component for more customization
-      and reusability inside forms, but for simplicity, we use TextInput here
       <TextInput
         style={styles.input}
         keyboardType="numeric"
